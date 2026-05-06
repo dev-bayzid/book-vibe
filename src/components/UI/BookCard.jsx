@@ -1,8 +1,9 @@
 import { Star } from "lucide-react";
+import { Link } from "react-router";
 
 const BookCard = ({ book }) => {
   return (
-    <div className="card bg-base-100 shadow-sm">
+    <Link to={`/bookDetails/${book.bookId }`} className="card bg-base-100 shadow-sm">
       <figure className="bg-base-200 p-10">
         <img src={book.image} alt={book.bookName} className="h-[300px]" />
       </figure>
@@ -30,7 +31,7 @@ const BookCard = ({ book }) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

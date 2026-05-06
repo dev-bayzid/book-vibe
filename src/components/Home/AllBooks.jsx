@@ -4,7 +4,7 @@ import BookCard from "../UI/BookCard";
 const booksData = fetch("/booksData.json").then((res) => res.json());
 const AllBooks = () => {
   const books = use(booksData);
-  console.log(books);
+//   console.log(books);
   return (
     <div className="mt-15">
         <h2 className="font-bold text-4xl text-center">Books</h2>
