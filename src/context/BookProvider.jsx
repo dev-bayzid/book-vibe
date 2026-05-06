@@ -8,7 +8,7 @@ const BookProvider = ({ children }) => {
   const [wishList, setWishList] = useState([]);
 
   const handleMarkAsRead = (currentBook) => {
-    const isExistBook = storedBooks.find((book) => book.id === currentBook.id);
+    const isExistBook = storedBooks.find((book) => book.bookId === currentBook.bookId);
 
     if (isExistBook) {
       toast.error("The book is already exist");
@@ -19,14 +19,14 @@ const BookProvider = ({ children }) => {
   };
   const handleWishList = (currentBook) => {
     const isExistToReadList = storedBooks.find(
-      (book) => book.id === currentBook.id,
+      (book) => book.bookId === currentBook.bookId,
     );
     if (isExistToReadList) {
       toast.error(`${currentBook.bookName} is already in read list`);
       return;
     }
 
-    const isExistBook = wishList.find((book) => book.id === currentBook.id);
+    const isExistBook = wishList.find((book) => book.bookId === currentBook.bookId);
 
     if (isExistBook) {
       toast.error("The book is already exist");
