@@ -4,7 +4,6 @@ const ListedBooksCard = ({ book }) => {
   const {
     bookName,
     author,
-
     image,
     totalPages,
     rating,
@@ -13,11 +12,14 @@ const ListedBooksCard = ({ book }) => {
     publisher,
     yearOfPublishing,
   } = book;
+
+
+
   return (
     <div className="my-10">
-      <div className="flex flex-col md:flex-row bg-base-100 shadow-sm rounded-3xl">
+      <div className="flex flex-col md:flex-row bg-base-200 shadow-sm rounded-3xl">
         <figure className="p-10">
-          <img src={image} alt={bookName} className="h-[200px]" />
+          <img src={image} alt={bookName} className="h-[200px] bg-base-300" />
         </figure>
         <div className="card-body space-y-3">
           <h2 className="font-bold text-3xl">{bookName}</h2>
@@ -42,7 +44,7 @@ const ListedBooksCard = ({ book }) => {
             </div>
           </div>
 
-          <div className="flex justify-start gap-10 text-xl border-b border-gray-300 pb-4">
+          <div className="flex justify-start gap-10 text-xl border-b border-gray-300 pb-4 text-gray-500">
             <div className="flex justify-start items-center gap-1">
               {" "}
               <Users className="w-4 h-4"></Users> Publisher : {publisher}
