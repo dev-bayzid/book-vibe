@@ -6,8 +6,8 @@ import ListedReadLists from "../../components/listedBooks/ListedReadLists";
 import ListedWishLists from "../../components/listedBooks/ListedWishLists";
 
 const Books = () => {
-  const { storedBooks, wishList } = useContext(BookContext);
-  console.log(storedBooks, wishList);
+  const { readList, wishList } = useContext(BookContext);
+  console.log(readList, wishList);
 
   const [sortingType, setSortingType] =useState("");
     console.log(sortingType, "sortingType");

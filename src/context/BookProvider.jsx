@@ -1,24 +1,37 @@
 import { createContext, useState } from "react";
 import { toast } from "react-toastify";
+import {
+  addReadListToLocalDB,
+  addWishListToLocalDB,
+  getAllReadListFromLocalDB,
+  getAllWishListFromLocalDB,
+} from "../Utils/localDB";
 
 export const BookContext = createContext();
 
 const BookProvider = ({ children }) => {
-  const [storedBooks, setStoredBooks] = useState([]);
-  const [wishList, setWishList] = useState([]);
+  const [readList, setReadList] = useState(() => getAllReadListFromLocalDB());
+  const [wishList, setWishList] = useState(() => getAllWishListFromLocalDB());
 
   const handleMarkAsRead = (currentBook) => {
-    const isExistBook = storedBooks.find((book) => book.bookId === currentBook.bookId);
+   
+
+    const isExistBook = readList.find(
+      (book) => book.bookId === currentBook.bookId,
+    );
 
     if (isExistBook) {
-      toast.error("The book is already exist");
+      toast.error("This book already exists");
     } else {
-      setStoredBooks([...storedBooks, currentBook]);
+       addReadListToLocalDB(currentBook);
+      setReadList([...readList, currentBook]);
       toast.success(`${currentBook.bookName} is added to read list`);
     }
   };
   const handleWishList = (currentBook) => {
-    const isExistToReadList = storedBooks.find(
+    
+
+    const isExistToReadList = readList.find(
       (book) => book.bookId === currentBook.bookId,
     );
     if (isExistToReadList) {
@@ -26,19 +39,22 @@ const BookProvider = ({ children }) => {
       return;
     }
 
-    const isExistBook = wishList.find((book) => book.bookId === currentBook.bookId);
+    const isExistBook = wishList.find(
+      (book) => book.bookId === currentBook.bookId,
+    );
 
     if (isExistBook) {
-      toast.error("The book is already exist");
+      toast.error("This book already exists");
     } else {
+      addWishListToLocalDB(currentBook);
       setWishList([...wishList, currentBook]);
       toast.success(`${currentBook.bookName} is added to Wish list`);
     }
   };
 
   const data = {
-    setStoredBooks,
-    storedBooks,
+    setReadList,
+    readList,
     handleMarkAsRead,
     handleWishList,
     setWishList,
