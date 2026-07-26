@@ -1,16 +1,147 @@
-# React + Vite
+# 📚 Book Vibe
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive book management web application built with **React.js**. Book Vibe allows users to explore books, view detailed information, and organize their reading journey by adding books to a wishlist or marking them as read.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Demo
 
-## React Compiler
+🔗 **Live Website:** https://books-vibe-read-books.netlify.app/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 📖 Browse Books
+- View books in a responsive card layout
+- Clean and modern user interface
+- Display book cover, title, author, category, and rating
+
+### 📘 Book Details
+- Dedicated details page for every book
+- View complete book information
+- Read book reviews
+- See publisher, publication year, number of pages, category, and tags
+
+### ❤️ Reading Management
+- Add books to your wishlist
+- Mark books as read
+- Prevent duplicate entries
+- Instant feedback with toast notifications
+
+### 📚 Reading List
+- View all saved books
+- Filter books by:
+  - 📄 Number of Pages
+  - ⭐ Rating
+  - 📅 Publication Year
+
+### 📱 Fully Responsive
+Optimized for:
+- 📱 Mobile
+- 💻 Laptop
+- 🖥️ Desktop
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- React.js
+- React Router DOM
+- Tailwind CSS
+- DaisyUI
+
+### State Management
+- Local Storage
+
+### Notifications
+- React Toastify
+
+### Icons
+- React Icons
+
+---
+
+## 📸 Pages
+
+### 🏠 Home
+- Hero Banner
+- Featured Books
+- Responsive Navigation
+
+### 📖 Book Details
+- Complete book information
+- Review section
+- Wishlist & Read buttons
+
+### 📚 Listed Books
+- Wishlist
+- Read Books
+- Sorting functionality
+
+### ❌ 404 Page
+- Custom Not Found page
+
+---
+
+
+
+## 🚀 Getting Started
+
+### Clone the repository
+
+```bash
+git clone https://github.com/dev-bayzid/book-vibe.git
+```
+
+### Navigate to the project
+
+```bash
+cd book-vibe
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start the development server
+
+```bash
+npm run dev
+```
+
+The application will run on:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 📦 Dependencies
+
+- React
+- React Router DOM
+- Tailwind CSS
+- DaisyUI
+- React Toastify
+- React Icons
+
+---
+
+## 👨‍💻 Developer
+
+**Bayzid Hasan**
+
+- 🌐 Portfolio: https://bayzid-dev.vercel.app
+- GitHub: https://github.com/dev-bayzid
+- LinkedIn: https://www.linkedin.com/in/bayzid-hasan-dev
+
+---
+
+## 📄 License
+
+This project was developed for learning purposes as part of a React application.
